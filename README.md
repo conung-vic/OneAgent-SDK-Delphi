@@ -253,5 +253,8 @@ are the property of their respective owners. This project is not affiliated with
 or endorsed by Dynatrace LLC (see the disclaimer at the top of this document).
 
 ## Discussion
-Feel free to discuss the project on forum - https://en.delphipraxis.net/topic/15601-dynatrace-oneagent-sdk-wrapper-for-delphi/ or here
+Feel free to discuss the project: 
+ * onforum - https://en.delphipraxis.net/topic/15601-dynatrace-oneagent-sdk-wrapper-for-delphi/
+ * linkedin - https://www.linkedin.com/feed/update/urn:li:activity:7473667355814998016/
+ or here in PRs, issues, etc
 Thank you
