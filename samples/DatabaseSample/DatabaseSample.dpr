@@ -47,7 +47,6 @@ begin
     on E: Exception do
     begin
       Tracer.SetError(E.ClassName, E.Message);
-      raise;
     end;
   end;
   Tracer.Finish;
@@ -67,7 +66,6 @@ begin
     on E: Exception do
     begin
       Tracer.SetError(E.ClassName, E.Message);
-      raise;
     end;
   end;
   Tracer.Finish;
@@ -105,7 +103,6 @@ begin
       on E: Exception do
       begin
         Wrapper.SetError(E.ClassName, E.Message);
-        raise;
       end;
     end;
     Wrapper.Finish;

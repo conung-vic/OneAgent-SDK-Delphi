@@ -42,9 +42,8 @@ begin
   except
     on E: Exception do
     begin
-      // Report the error to Dynatrace and re-raise.
+      // Report the error to Dynatrace
       Tracer.SetError(E.ClassName, E.Message);
-      raise;
     end;
   end;
   Tracer.Finish;
