@@ -18,6 +18,9 @@
         <Projects Include="samples\HttpRequestSample\HttpRequestSample.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="samples\FullChainSample\FullChainSample.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -71,14 +74,23 @@
     <Target Name="HttpRequestSample:Make">
         <MSBuild Projects="samples\HttpRequestSample\HttpRequestSample.dproj" Targets="Make"/>
     </Target>
+    <Target Name="FullChainSample">
+        <MSBuild Projects="samples\FullChainSample\FullChainSample.dproj"/>
+    </Target>
+    <Target Name="FullChainSample:Clean">
+        <MSBuild Projects="samples\FullChainSample\FullChainSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FullChainSample:Make">
+        <MSBuild Projects="samples\FullChainSample\FullChainSample.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="CustomServiceSample;DatabaseSample;RemoteCallSample;OneAgentSDK;HttpRequestSample"/>
+        <CallTarget Targets="CustomServiceSample;DatabaseSample;RemoteCallSample;OneAgentSDK;HttpRequestSample;FullChainSample"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="CustomServiceSample:Clean;DatabaseSample:Clean;RemoteCallSample:Clean;OneAgentSDK:Clean;HttpRequestSample:Clean"/>
+        <CallTarget Targets="CustomServiceSample:Clean;DatabaseSample:Clean;RemoteCallSample:Clean;OneAgentSDK:Clean;HttpRequestSample:Clean;FullChainSample:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="CustomServiceSample:Make;DatabaseSample:Make;RemoteCallSample:Make;OneAgentSDK:Make;HttpRequestSample:Make"/>
+        <CallTarget Targets="CustomServiceSample:Make;DatabaseSample:Make;RemoteCallSample:Make;OneAgentSDK:Make;HttpRequestSample:Make;FullChainSample:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
