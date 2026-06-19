@@ -1,0 +1,17 @@
+# Delphi build / IDE artifacts
+__history/
+__recovery/
+*.dcu
+*.exe
+*.local
+*.*.local
+*.identcache
+*.map
+*.drc
+*.~*
+Win32/
+Win64/
+
+# NOTE: *.res and samples/**/onesdk_shared.dll are intentionally committed so the
+# samples compile and run without any preparation. They are NOT ignored.
+# The lib/ onesdk_shared.dll binaries are committed on purpose.

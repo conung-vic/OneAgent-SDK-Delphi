@@ -1,0 +1,84 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1B6D8C14-10E5-452B-B2E2-A198BFA1BB54}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="samples\CustomServiceSample\CustomServiceSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="samples\DatabaseSample\DatabaseSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="samples\RemoteCallSample\RemoteCallSample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="OneAgentSDK.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="samples\HttpRequestSample\HttpRequestSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CustomServiceSample">
+        <MSBuild Projects="samples\CustomServiceSample\CustomServiceSample.dproj"/>
+    </Target>
+    <Target Name="CustomServiceSample:Clean">
+        <MSBuild Projects="samples\CustomServiceSample\CustomServiceSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CustomServiceSample:Make">
+        <MSBuild Projects="samples\CustomServiceSample\CustomServiceSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DatabaseSample">
+        <MSBuild Projects="samples\DatabaseSample\DatabaseSample.dproj"/>
+    </Target>
+    <Target Name="DatabaseSample:Clean">
+        <MSBuild Projects="samples\DatabaseSample\DatabaseSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DatabaseSample:Make">
+        <MSBuild Projects="samples\DatabaseSample\DatabaseSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="RemoteCallSample">
+        <MSBuild Projects="samples\RemoteCallSample\RemoteCallSample.dproj"/>
+    </Target>
+    <Target Name="RemoteCallSample:Clean">
+        <MSBuild Projects="samples\RemoteCallSample\RemoteCallSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RemoteCallSample:Make">
+        <MSBuild Projects="samples\RemoteCallSample\RemoteCallSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="OneAgentSDK">
+        <MSBuild Projects="OneAgentSDK.dproj"/>
+    </Target>
+    <Target Name="OneAgentSDK:Clean">
+        <MSBuild Projects="OneAgentSDK.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OneAgentSDK:Make">
+        <MSBuild Projects="OneAgentSDK.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HttpRequestSample">
+        <MSBuild Projects="samples\HttpRequestSample\HttpRequestSample.dproj"/>
+    </Target>
+    <Target Name="HttpRequestSample:Clean">
+        <MSBuild Projects="samples\HttpRequestSample\HttpRequestSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HttpRequestSample:Make">
+        <MSBuild Projects="samples\HttpRequestSample\HttpRequestSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CustomServiceSample;DatabaseSample;RemoteCallSample;OneAgentSDK;HttpRequestSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CustomServiceSample:Clean;DatabaseSample:Clean;RemoteCallSample:Clean;OneAgentSDK:Clean;HttpRequestSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CustomServiceSample:Make;DatabaseSample:Make;RemoteCallSample:Make;OneAgentSDK:Make;HttpRequestSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

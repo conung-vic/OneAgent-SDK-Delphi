@@ -1,0 +1,21 @@
+OneAgent SDK for Delphi
+Copyright 2026 Igor Petetskikh
+
+This product includes software developed as an independent, community project.
+It is NOT affiliated with, endorsed by, or supported by Dynatrace LLC.
+
+This distribution bundles, unmodified, the following third-party binaries:
+
+  * Dynatrace OneAgent SDK for C/C++ shared library (onesdk_shared.dll)
+    Copyright Dynatrace LLC
+    Licensed under the Apache License, Version 2.0
+    https://github.com/Dynatrace/OneAgent-SDK-for-C
+
+"Dynatrace" and "OneAgent" are trademarks of Dynatrace LLC and are used here
+for descriptive purposes only.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+these files except in compliance with the License. You may obtain a copy of the
+License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
